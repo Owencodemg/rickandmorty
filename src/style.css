@@ -1,0 +1,1375 @@
+/*
+! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+  tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-slate-100 {
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity));
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+*{
+  font-family: 'Lemon', serif;
+}
+
+.wrapper {
+  width: 200px;
+  height: 60px;
+  z-index: 1;
+  top: 70%;
+  left: 45%;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle7124 .5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+
+  100% {
+    top: 0%;
+  }
+}
+
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: .2s;
+}
+
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}
+
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.9);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow046 .5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+
+  40% {
+    transform: scaleX(1);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scaleX(.2);
+    opacity: .4;
+  }
+}
+
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: .2s
+}
+
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}
+
+.switch {
+  font-size: 17px;
+  position: fixed;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+  z-index: 2;
+  left: 93%;
+  margin: .625rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .switch {
+    left: 80%;
+  }
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */
+
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */
+
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+.title{
+  top: 30%;
+  left: 20%;
+  text-shadow: 6px 5px 3px rgba(7, 199, 0, 1);
+}
+
+@media (min-width: 640px) {
+  .sm\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
+.text-main{
+  text-shadow: 6px 5px 3px rgba(7, 199, 0, 1);
+  
+}
+
+.imgtop{
+  width: 100%;  
+  height: 300px;
+  object-fit: fill;
+}
+
+.containercard{
+  box-shadow: 14px 26px 54px -21px rgba(0,173,20,0.7);
+}
+.containercard:hover{
+  box-shadow: 14px 26px 54px -21px rgba(14, 0, 173, 0.819);
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.footerimg{
+  box-shadow: 14px 26px 54px -21px rgba(14, 0, 173, 0.819);
+}
+.footerimg:hover{
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+.form-container {
+  width: 400px;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%, rgba(0,173,20,0.7), #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+}
+.form-container:hover{
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color:  rgba(0,173,20,0.7);
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color:  rgba(0,173,20,0.7);
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+
+.c-button {
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+}
+
+.c-button--gooey {
+  color: rgba(0,173,20,0.7);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid rgba(0,173,20,0.7);
+  border-radius: 5px;
+  position: relative;
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+  background-color: rgba(57, 178, 239, 0.819);
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+  color: #fff;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+.main_back {
+  position: absolute;
+  border-radius: 10px;
+  transform: rotate(90deg);
+  width: 11em;
+  height: 11em;
+  background: linear-gradient(270deg, #03a9f4, #cc39a4, #ffb5d2);
+  z-index: -2;
+  box-shadow: inset 0px 0px 180px 5px #ffffff;
+  transition: opacity 1s, border-radius .3s;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 14em;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.card {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-top-left-radius: 10px;
+  background: lightgrey;
+  transition: .3s ease, .15s background-color, .15s background-image ease-in-out;
+  background: rgba(28, 229, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border: 1px solid transparent;
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 100px;
+
+}
+
+.card .instagram {
+  opacity: 0;
+  transition: .2s ease-in-out;
+  fill: #cc39a4;
+}
+
+.card:nth-child(2) {
+  border-radius: 0px;
+}
+
+.card:nth-child(2) .twitter {
+  opacity: 0;
+  transition: .2s ease-in-out;
+  fill: #03A9F4;
+}
+
+.card:nth-child(3) {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.card:nth-child(3) .dribble {
+  opacity: 0;
+  transition: .2s ease-in-out;
+  fill: #ffb5d2;
+}
+
+.card:nth-child(4) {
+  border-radius: 0px;
+}
+
+.card:nth-child(4) .codepen {
+  opacity: 0;
+  transition: .2s ease-in-out;
+  fill: black;
+}
+
+.card:nth-child(5) {
+  border-radius: 0px;
+}
+
+.card:nth-child(5) .uiverse {
+  position: absolute;
+  margin-left: 0.2em;
+  margin-top: 0.2em;
+  opacity: 0;
+  transition: .2s ease-in-out;
+}
+
+.card:nth-child(6) {
+  border-radius: 0px;
+}
+
+.card:nth-child(6) .discord {
+  opacity: 0;
+  transition: .2s ease-in-out;
+  fill: #8c9eff;
+}
+
+.card:nth-child(7) {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.card:nth-child(7) .github {
+  opacity: 0;
+  transition: .2s ease-in-out;
+  fill: black;
+}
+
+.card:nth-child(8) {
+  border-radius: 0px;
+}
+
+.card:nth-child(8) .telegram {
+  opacity: 0;
+  transition: .2s ease-in-out;
+  fill: #29b6f6;
+}
+
+.card:nth-child(9) {
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.card:nth-child(9) .reddit {
+  opacity: 0;
+  transition: .2s ease-in-out;
+}
+
+.main:hover {
+  width: 14em;
+  cursor: pointer;
+}
+
+.main:hover .main_back {
+  opacity: 0;
+  border-radius: 30px;
+}
+
+.main:hover .card {
+  --hover-edge-radius: 100%;
+  --hover-edge-offset: 10%;
+  margin: .2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0,173,20,0.7);
+  background: rgba(57, 178, 239, 0.819);
+}
+
+.main:hover .card:nth-child(1) {
+  border-top-left-radius: var(--hover-edge-radius);
+}
+
+.main:hover .card:nth-child(3) {
+  border-top-right-radius: var(--hover-edge-radius);
+}
+
+.main:hover .card:nth-child(7) {
+  border-bottom-left-radius: var(--hover-edge-radius);
+}
+
+.main:hover .card:nth-child(9) {
+  border-bottom-right-radius: var(--hover-edge-radius);
+}
+
+.main:hover .card:nth-child(1) svg {
+  margin-top: var(--hover-edge-offset);
+  margin-left: var(--hover-edge-offset);
+}
+
+.main:hover .card:nth-child(3) svg {
+  margin-top: var(--hover-edge-offset);
+  margin-right: var(--hover-edge-offset);
+}
+
+.main:hover .card:nth-child(7) svg {
+  margin-bottom: var(--hover-edge-offset);
+  margin-left: var(--hover-edge-offset);
+}
+
+.main:hover .card:nth-child(9) svg {
+  margin-bottom: var(--hover-edge-offset);
+  margin-right: var(--hover-edge-offset);
+}
+
+.main:hover .card:nth-child(5) {
+  border: transparent;
+}
+
+.main:hover .text {
+  opacity: 0;
+  z-index: -3;
+}
+
+.main:hover .instagram {
+  opacity: 1;
+}
+
+.main:hover .twitter {
+  opacity: 1;
+}
+
+.main:hover .dribble {
+  opacity: 1;
+}
+
+.main:hover .codepen {
+  opacity: 1;
+}
+
+.main:hover .uiverse {
+  opacity: 1;
+}
+
+.main:hover .discord {
+  opacity: 1;
+}
+
+.main:hover .github {
+  opacity: 1;
+}
+
+.main:hover .telegram {
+  opacity: 1;
+}
+
+.main:hover .reddit {
+  opacity: 1;
+}
+
+.card:nth-child(1):hover {
+  background-color: #cc39a4;
+}
+
+.card:nth-child(1):hover .instagram {
+  fill: white;
+}
+
+.card:nth-child(2):hover {
+  background-color: #03A9F4;
+}
+
+.card:nth-child(2):hover .twitter {
+  fill: white;
+}
+
+.card:nth-child(3):hover {
+  background-color: #ffb5d2;
+}
+
+.card:nth-child(3):hover .dribble {
+  fill: white;
+}
+
+.card:nth-child(4):hover {
+  background-color: #1E1F26;
+}
+
+.card:nth-child(4):hover .codepen {
+  fill: white;
+}
+
+.card:nth-child(5):hover {
+  animation: backgroundIMG .1s;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-child(5):hover .uiverse #paint0_linear_501_142 stop {
+  stop-color: white;
+}
+
+.card:nth-child(5):hover .uiverse #paint1_linear_501_142 stop {
+  stop-color: white;
+}
+
+.card:nth-child(5):hover .uiverse #paint2_linear_501_142 stop {
+  stop-color: white;
+}
+
+@keyframes backgroundIMG {
+  100% {
+    background-image: linear-gradient(#BF66FF,#6248FF,#00DDEB);
+  }
+}
+
+.card:nth-child(6):hover {
+  background-color: #8c9eff;
+}
+
+.card:nth-child(6):hover .discord {
+  fill: white;
+}
+
+.card:nth-child(7):hover {
+  background-color: black;
+}
+
+.card:nth-child(7):hover .github {
+  fill: white;
+}
+
+.card:nth-child(8):hover {
+  background-color: #29b6f6;
+}
+
+.card:nth-child(8):hover .telegram > path:nth-of-type(1) {
+  fill: white;
+}
+
+.card:nth-child(8):hover .telegram > path:nth-of-type(2) {
+  fill: #29b6f6;
+}
+
+.card:nth-child(8):hover .telegram > path:nth-of-type(3) {
+  fill: #29b6f6;
+}
+
+.card:nth-child(9):hover {
+  background-color: rgb(255,69,0);
+}
+
+.card:nth-child(9) .reddit > g circle {
+  fill: rgb(255,69,0);
+}
+
+.card:nth-child(9) .reddit > g path {
+  fill: white;
+}
+
+.text {
+  position: relative;
+  font-size: 0.7em;
+  transition: .4s ease-in-out;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.33em;
+  z-index: 3;
+  left: 50%;
+  
+}
